@@ -1,0 +1,113 @@
+css dans html : il faut crée une balise <style></style> dans le head
+//selecteur et ppté : 
+h1 { 
+		backgroud_color = "green"
+		... autres ppté ...
+}
+
+//ou ecrir css :
+	- dans le style qui est dans le head 
+	- dans la balise ouvrante d'un element 
+	- crée une page specialement pour le code css (sur notpad) style.css, en creant un lien entre les deux page ( <link rel="stylesheet" href="style.css" > dans le head)
+	
+//commentaire et indentation :
+	/* ....... */  
+	l'indentation rend le code plus lisible 
+	
+//selecteur multiple : 
+	h1, p, h2{
+		backgroud_color = "green"
+	}
+
+//selecteur universel : sur tout les element
+*{
+	backgroud_color = "green"
+} 
+
+//les attributs id : pour cibler un element, cet id ne se repete jamais
+1- <h1 id="titre">Mon premier titre </h1>  
+2- #titre {
+		backgroud_color = "green"
+	}
+
+
+//les class : sur plus de 1 element, peut se repeter autant de fois qu'on veut
+1-  <h1 class="titre">Mon premier titre </h1>  
+	<h1 class="titre">Mon deuxieme titre </h1> 
+2- .titre{
+		backgroud_color = "green"
+	}
+	
+//l'heritage et la redefinition : 
+Notion d'element parent et d'element enfant 
+Chaque element enfant recoit en heritage tous les styles de son element parent 
+body{
+	font-family : Arial; 
+}
+tous les element de body aurant cette meme police "Arial "
+
+//la priorité des selecteurs 
+l'id est plus precit que la class, qui est elle plus precise que la balise ouvrante d'un element, enfin on trouve l'element parent qui est le moins precit 
+
+//les element en bloc : p/h/tableau/tab/ list/ div ...
+il commence par une nouvelle ligne 
+il prend tout l'espace de la page 
+
+//les elements en lignes : i italique / a lien / strong / b/ en /img
+il ne commence pas par une nouvelle ligne, et sa modification ne prend que la surface de l'element 
+
+//balise div et span 
+span : pour changer une phrase de notre paragraphe sans changer le reste 
+div : un conteneur ou on met plusieur elements sur lesquel on veux appliquer la meme ppté 
+donc on va entourer notre bloc d'element par la balise div 
+<div>
+<p>...</p>
+<p>...</p>
+</div>
+ensuite on va sur css : 
+div {
+	font-family : Arial;
+}
+
+//la taille du text : prendre en concideration la taille d'ecran de l'usager, le type du navigateur 
+- taille type absolue : p { font-size : 30px; }
+- taille relative : p { font-size : 200%; } il double la taille par defaut 
+p { font-size : 2em; } p { font-size : 0.5em; } reduit la taille de 1/2 
+
+//poids du text (font-style) 
+p { font-style : italic / normal / oblique / inherit } (l'element p herite la valeur de l'element parent) 
+
+// style du test (font-weight) 
+p{ font-weight :  bold / normal / lighter / bolder / } (reduit et agrandi par rapport à l'element parent) 
+
+//couleur du texte 
+#nom-id {color: red;} / #nom-id {color: rgb(255,255,255);} 
+#nom-id {color: #FF0000;} / #nom-id {color: rgba(255,255,255,0,5 );}  alpha va regler la transparence du text 
+
+// autre ppté du text : 
+#nom-id { test-decoration : underline / overline / line-through /inherit / none;} 
+#nom-id { test-decoration : underline #FF00FF solid }
+#nom-id { test-transform : lowercase / uppercase / capitalize / none; 
+#nom-id { test-indent : 100px;} indenter le text a gauche "+" ou a droite "-"
+
+//ombre du text 
+p { test-shadow : 2px 2px red; } horiz vertical couleur
+
+//ppté pour l'espacece et la position 
+p { test-align: center / left / right / inherit / justify 
+p { line-height : 40px } combien d'espace entre lignes
+p { word-spacing : 10px } espace entre mots
+p { letter-spacing : 2px } espace entre lettre 
+
+//les bordures d'un texte
+#nom-id { border : 2px solid green } epaisseur enchainement couleur 
+
+// modele des boites : 4 boites : 
+- contenu : div {background-color : green; }
+- padding : div {padding : 20px; }
+- bordure : div {border: 10px solid red;}
+- margin : div {margin: 30px;}
+
+
+
+
